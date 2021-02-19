@@ -1,0 +1,10 @@
+<table border=1>
+                
+                      <tr class=rowheader >
+                      <td>No</td>
+                      <td>Kode Barang</td>
+                      <td>Nama Barang</td>
+                      <td>Cabang</td>
+                      <td>Status</td>
+                  
+                      </tr><tr class=rowcontent><td align=center>1</td><td align=left>CB_001-BR-0001</td><td align=left>sunligh</td><td align=left>Bogor</td><td align=left>Aktif</td></tr><tr class=rowcontent><td align=center>2</td><td align=left>CB_001-BR-0002</td><td align=left>barang 2</td><td align=left>Bogor</td><td align=left>Aktif</td></tr><tr class=rowcontent><td align=center>3</td><td align=left>CB_001-BR-0003</td><td align=left>daia</td><td align=left>Bogor</td><td align=left>Aktif</td></tr><tr class=rowcontent><td align=center>4</td><td align=left>CB_002-BR-0002</td><td align=left>sabun</td><td align=left>Depok</td><td align=left>Aktif</td></tr><tr class=rowcontent><td align=center>5</td><td align=left>CB_002-BR-0003</td><td align=left>vitamin c</td><td align=left>Depok</td><td align=left>Aktif</td></tr>

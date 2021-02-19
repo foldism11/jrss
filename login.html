@@ -1,0 +1,204 @@
+<?
+session_start();//to make sure all session is destroyed
+	        //turn on Addtype application/x-php	.html on your apache config
+session_destroy();
+require_once('config/connection.php');
+?>
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd"><html><head><meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1"><title>NangkoelFramework</title></head>
+<link rel=stylesheet type='text/css' href='style/generic.css'>
+<style>
+	
+</style>
+<script language=JavaScript1.2 src='js/generic.js'></script>
+<script language=JavaScript1.2 src='js/drag.js'></script>
+<script language=JavaScript1.2 src='js/login.js'></script>
+
+<body>
+    
+<script type="text/javascript">
+var myVar=setInterval(function(){myTimer()},300000); // update tiap 5 menit
+function myTimer()
+{
+    var d = new Date();
+}
+window.onload=myTimer() 
+</script>
+
+<!-- 
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>AdminLTE 3 | Log in</title>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="stylesheet" href="plugins/fontawesome-free/css/all.min.css">
+
+  <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+
+  <link rel="stylesheet" href="plugins/icheck-bootstrap/icheck-bootstrap.min.css">
+
+  <link rel="stylesheet" href="dist/css/adminlte.min.css">
+
+  <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
+</head>
+<body class="hold-transition login-page">
+<div class="login-box">
+  <div class="login-logo">
+    <a href="../../index2.php"><b>J</b>R</a> <b>S</b>ukses <b>S</b>elalu
+  </div>
+
+  <div class="card">
+    <div class="card-body login-card-body">
+      <p class="login-box-msg">Login</p>
+
+    
+        <div class="input-group mb-3">
+          <input type="input" class="form-control" placeholder="Username" id=name>
+          <div class="input-group-append">
+            <div class="input-group-text">
+              <span class="fas fa-envelope"></span>
+            </div>
+          </div>
+        </div>
+        <div class="input-group mb-3">
+          <input type="password" class="form-control" placeholder="Password" id=pwd>
+          <div class="input-group-append">
+            <div class="input-group-text">
+              <span class="fas fa-lock"></span>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-8">
+            <div class="icheck-primary">
+              <input type="checkbox" id="remember">
+
+            </div>
+          </div>
+
+          <div class="col-4">
+            <button type="submit" class="btn btn-primary btn-block" onclick=login()>Sign In</button>
+          </div>
+
+        </div>
+  
+
+    </div>
+
+  </div>
+</div>
+
+
+
+<script src="plugins/jquery/jquery.min.js"></script>
+
+<script src="plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+<script src="dist/js/adminlte.min.js"></script>
+
+
+<div id='progress' style='display:none;border:orange solid 1px;width:150px;position:absolute;right:20px;top:65px;color:#ff0000;font-family:Tahoma;font-size:13px;font-weight:bolder;text-align:center;background-color:#FFFFFF;z-index:10000;'>
+Please wait.....! <br>
+<img src='images/progress.gif'>
+</div>
+
+
+</body>
+</html>
+ -->
+
+
+<?
+session_start();//to make sure all session is destroyed
+	        //turn on Addtype application/x-php	.html on your apache config
+session_destroy();
+require_once('config/connection.php');
+?>
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd"><html><head><meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1"><title>JrSs</title></head>
+<link rel=stylesheet type='text/css' href='style/generic.css'>
+<style>
+	
+</style>
+<script language=JavaScript1.2 src='js/generic.js'></script>
+<script language=JavaScript1.2 src='js/drag.js'></script>
+<script language=JavaScript1.2 src='js/login.js'></script>
+
+<body>
+    
+<script type="text/javascript">
+var myVar=setInterval(function(){myTimer()},300000); // update tiap 5 menit
+function myTimer()
+{
+    var d = new Date();
+}
+window.onload=myTimer() 
+</script>
+
+
+
+<div class=drag style='width:450px;text-align:center;margin:15% 0 0 35%;'>
+
+		
+		<br>
+	
+		<br>
+		<div style=" margin:0% 0 0 4%; background-image:url('./images/jrss.jpg');background-repeat:no-repeat; ">
+		<b style='font-size:25px;color:#41df00;'>L O G I N</b>	
+		<br>
+		<table align="right" style='font-weight:bold;'>
+		<tr>
+			<td style='font-size:18px; color:#41df00;' align="right">Username</td><td style='color:#41df00;'>:</td><td align="left"><input  type=text  class=myinputtext size=30 id=name onkeypress="return enter(event);" title='Case-sensitif'></td>
+			<td style='font-size:18px; color:#41df00;' align="right">&nbsp;</td>
+		</tr>
+		<tr>
+			
+		</tr>
+		<tr>
+			<td style='font-size:18px; color:#41df00;'>Password</td><td style='color:#41df00;'>:</td><td align="left"><input  type=password   class=myinputtext   size=30  id=pwd onkeypress="return enter(event);" title='Case-sensitif'></td>
+		</tr>
+		<tr hidden><td>Language</td><td>:</td><td align="left"><select id=language>
+<?
+$str=$owlPDO->query("select * from ".$dbname.".namabahasa order by code");
+$str->setFetchMode(PDO::FETCH_OBJ);
+while($bar=$str->fetch())
+{ 
+  echo "<option value='".$bar->code."'";
+  # Default Language
+  if($bar->code=='ID') {
+	echo " selected";
+  }
+  echo ">".$bar->name."</option>";
+}
+?>
+
+	</select></td></tr>
+	<tr>
+			<td style='font-size:18px; color:#e7ea10;' align="right">&nbsp;</td>
+	</tr>
+	<tr>
+			<td style='font-size:18px; color:#e7ea10;' align="right">&nbsp;</td>
+			<td style='font-size:18px; color:#e7ea10;' align="right">&nbsp;</td>
+			<td style='font-size:18px; color:#e7ea10;' align="left"><input  style='font-size:20px;' type=button class=mybutton value='Login' onclick=login()></td>
+	</tr>
+	<br>	
+	</table>
+    <br><br>
+	<br><br><br><br><br><br><br>
+	</div>
+	</div>
+	<div id=msg></div>
+
+</div>
+
+<?
+//echo CLOSE_THEME();
+?>		
+
+<div id='progress' style='display:none;border:orange solid 1px;width:150px;position:absolute;right:20px;top:65px;color:#ff0000;font-family:Tahoma;font-size:13px;font-weight:bolder;text-align:center;background-color:#FFFFFF;z-index:10000;'>
+Please wait.....! <br>
+<img src='images/progress.gif'>
+</div>
+</body></html>
